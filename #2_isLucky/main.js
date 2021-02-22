@@ -14,10 +14,19 @@ isLucky(n) = false.
 function isLucky(n) {
   let sumOfFirstHalf = 0;
   let sumOfSecondHalf = 0;
-  let halfOfNum = String(n).length / 2;
+  let lengthOfNum = String(n).length;
+  let halfOfNum = lengthOfNum / 2;
 
-  //   console.log(halfOfNum);
-  return;
+  for (let i = 0; i < lengthOfNum; i++) {
+    if (i < halfOfNum) {
+      sumOfFirstHalf += Number(String(n)[i]);
+    } else {
+      sumOfSecondHalf += Number(String(n)[i]);
+    }
+  }
+
+  return sumOfFirstHalf === sumOfSecondHalf;
 }
 
-isLucky(1230);
+const res = isLucky(122103);
+console.log(res);
