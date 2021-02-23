@@ -10,7 +10,13 @@ alternatingSums(a) = [180, 105].
 */
 
 function alternatingSums(a) {
-  return a.reduce((el, i) => {});
+  return a.reduce(
+    (acc, next, i) => {
+      i % 2 === 0 ? (acc[0] += next) : (acc[1] += next);
+      return acc;
+    },
+    [0, 0]
+  );
 }
 
 const a = [50, 60, 60, 45, 70];
