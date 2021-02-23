@@ -20,10 +20,10 @@ Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
 */
 
 function reverseInParentheses(str) {
-  for (let i = str.length; i >= 0; i--) {
-    console.log(str[i]);
-  }
-  // const arrStr = str.split("");
+  const arrStr = str.split("");
+  console.log(arrStr);
+  for (let i = str.length; i >= 0; i--) {}
+
   // const LEFT_SIDE_ROUND_BRACKET = "(";
   // const RIGHT_SIDE_ROUND_BRACKET = ")";
 
