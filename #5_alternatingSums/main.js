@@ -8,3 +8,9 @@ Example
 For a = [50, 60, 60, 45, 70], the output should be
 alternatingSums(a) = [180, 105].
 */
+
+function alternatingSums(a) {}
+
+const a = [50, 60, 60, 45, 70];
+const res = alternatingSums(a);
+console.log(res);
