@@ -19,36 +19,19 @@ reverseInParentheses(inputString) = "foobazrabblim".
 Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
 */
 
-function reverseInParentheses(str) {
-  const arrStr = str.split("");
-
-  let a = str.match(/([a-z])/g);
-  console.log(a);
-  for (let i = str.length; i >= 0; i--) {}
-
-  //  const LEFT_SIDE_ROUND_BRACKET = "(";
-  // const RIGHT_SIDE_ROUND_BRACKET = ")";
-
-  // const leftBrace = arrInputString.indexOf("(");
-  // const rightBrace = arrInputString.indexOf(")");
-  // const size = inputString.length;
-
-  // arrInputString.splice(
-  //   leftBrace,
-  //   rightBrace - leftBrace + 1,
-  //   arrInputString
-  //     .slice(leftBrace + 1, rightBrace)
-  //     .reverse()
-  //     .join("")
-  // );
-
-  // return arrInputString.join("");
+function reverseInParentheses(inputString) {
+  while (inputString.includes("(")) {
+    inputString = inputString.replace(/\(([^()]*)\)/, (_, str) =>
+      [...str].reverse().join("")
+    );
+  }
+  return inputString;
 }
 
 // const inputString = "(bar)";
 // const inputString = "foo(bar)baz";
-const inputString = "foo(bar)baz(blim)";
-// const inputString = "foo(bar(baz))blim";
+// const inputString = "foo(bar)baz(blim)";
+const inputString = "foo(bar(baz))blim";
 
 const res = reverseInParentheses(inputString);
 console.log(res);
