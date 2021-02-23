@@ -21,10 +21,12 @@ Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
 
 function reverseInParentheses(str) {
   const arrStr = str.split("");
-  console.log(arrStr);
+
+  let a = str.match(/([a-z])/g);
+  console.log(a);
   for (let i = str.length; i >= 0; i--) {}
 
-  // const LEFT_SIDE_ROUND_BRACKET = "(";
+  //  const LEFT_SIDE_ROUND_BRACKET = "(";
   // const RIGHT_SIDE_ROUND_BRACKET = ")";
 
   // const leftBrace = arrInputString.indexOf("(");
