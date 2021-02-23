@@ -19,15 +19,14 @@ reverseInParentheses(inputString) = "foobazrabblim".
 Because "foo(bar(baz))blim" becomes "foo(barzab)blim" and then "foobazrabblim".
 */
 
-function reverseInParentheses(inputString) {
-  const arrInputString = inputString.split("");
-  const LEFT_SIDE_ROUND_BRACKET = "(";
-  const RIGHT_SIDE_ROUND_BRACKET = ")";
+function reverseInParentheses(str) {
+  for (let i = str.length; i >= 0; i--) {
+    console.log(str[i]);
+  }
+  // const arrStr = str.split("");
+  // const LEFT_SIDE_ROUND_BRACKET = "(";
+  // const RIGHT_SIDE_ROUND_BRACKET = ")";
 
-  const res = arrInputString.map((el) => {
-    if (el === LEFT_SIDE_ROUND_BRACKET) {
-    }
-  });
   // const leftBrace = arrInputString.indexOf("(");
   // const rightBrace = arrInputString.indexOf(")");
   // const size = inputString.length;
