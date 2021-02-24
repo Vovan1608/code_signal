@@ -12,22 +12,12 @@ addBorder(picture) = ["*****",
 */
 
 function addBorder(picture) {
-  const elSize = picture[0].length + 2;
-  let copyPicture = [...picture].map((el) => {
-    return [].concat("*", el, "*").join("");
-  });
-
-  const modifyPicture = [
-    repeatAsterisks(elSize),
-    ...copyPicture,
-    repeatAsterisks(elSize),
+  var width = picture[0].length + 2;
+  return [
+    "*".repeat(width),
+    ...picture.map((el) => `*${el}*`),
+    "*".repeat(width),
   ];
-
-  return modifyPicture;
-}
-
-function repeatAsterisks(num) {
-  return "*".repeat(num);
 }
 
 const picture = ["abc", "ded"];
