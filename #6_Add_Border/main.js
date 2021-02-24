@@ -12,12 +12,8 @@ addBorder(picture) = ["*****",
 */
 
 function addBorder(picture) {
-  var width = picture[0].length + 2;
-  return [
-    "*".repeat(width),
-    ...picture.map((el) => `*${el}*`),
-    "*".repeat(width),
-  ];
+  const widthElem = "*".repeat(picture[0].length + 2);
+  return [widthElem, ...picture.map((el) => `*${el}*`), widthElem];
 }
 
 const picture = ["abc", "ded"];
