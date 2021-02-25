@@ -23,7 +23,9 @@ function areSimilar(a, b) {
   for (let i = 0; i < size; i++) {
     if (a[i] === b[i]) {
       flag = true;
-    } else if (a[i] === b[i + 1] && b[i] === a[i + 1]) {
+    } else if (a[i] === b[i + 1]) {
+      flag = true;
+    } else if (a[i] === b[i - 1]) {
       flag = true;
     } else {
       return false;
