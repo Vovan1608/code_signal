@@ -6,3 +6,5 @@ Example
 For inputArray = [1, 1, 1], the output should be
 arrayChange(inputArray) = 3.
 */
+
+function arrayChange(inputArray) {}
