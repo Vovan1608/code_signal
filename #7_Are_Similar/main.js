@@ -18,11 +18,18 @@ Any swap of any two elements either in a or in b won't make a and b equal.
 */
 
 function areSimilar(a, b) {
-  return sortArr(a) === sortArr(b);
-}
-
-function sortArr(arr) {
-  return arr.sort((a, b) => a - b).join("");
+  let flag = null;
+  const size = a.length;
+  for (let i = 0; i < size; i++) {
+    if (a[i] === b[i]) {
+      flag = true;
+    } else if (a[i] === b[i + 1] && b[i] === a[i + 1]) {
+      flag = true;
+    } else {
+      return false;
+    }
+  }
+  return flag;
 }
 
 const a = [1, 2, 3];
