@@ -7,7 +7,11 @@ For inputArray = [1, 1, 1], the output should be
 arrayChange(inputArray) = 3.
 */
 
-function arrayChange(inputArray) {}
+function arrayChange(inputArray) {
+  return inputArray.reduce((acc, next) => {
+    acc = Math.abs(acc);
+  });
+}
 
 const inputArray = [1, 1, 1];
 const res = arrayChange(inputArray);
