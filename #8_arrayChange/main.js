@@ -8,3 +8,7 @@ arrayChange(inputArray) = 3.
 */
 
 function arrayChange(inputArray) {}
+
+const inputArray = [1, 1, 1];
+const res = arrayChange(inputArray);
+console.log(res);
