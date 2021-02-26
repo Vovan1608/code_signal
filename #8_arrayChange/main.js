@@ -10,12 +10,14 @@ arrayChange(inputArray) = 3.
 function arrayChange(inputArray) {
   let acc = 0;
   const cloneInputArr = [...inputArray];
+
   cloneInputArr.reduce((cur, next) => {
     if (cur >= next) {
       let tempVar = cur - next + 1;
       acc += tempVar;
       next += tempVar;
     }
+
     return next;
   });
 
