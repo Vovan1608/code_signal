@@ -8,9 +8,12 @@ arrayChange(inputArray) = 3.
 */
 
 function arrayChange(inputArray) {
-  return inputArray.reduce((acc, next) => {
-    acc = Math.abs(acc);
+  let acc = 0;
+  inputArray.reduce((cur, next) => {
+    acc = Math.abs(cur - next);
+    return next;
   });
+  return acc;
 }
 
 const inputArray = [1, 1, 1];
