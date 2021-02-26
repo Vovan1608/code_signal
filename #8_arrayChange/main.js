@@ -9,10 +9,8 @@ arrayChange(inputArray) = 3.
 
 function arrayChange(inputArray) {
   let acc = 0;
-  inputArray.reduce((cur, next) => {
-    acc = Math.abs(cur - next);
-    return next;
-  });
+  const cloneInputArr = [...inputArray];
+  cloneInputArr.reduce((cur, next) => {});
   return acc;
 }
 
