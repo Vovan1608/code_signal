@@ -18,6 +18,7 @@ function arrayChange(inputArray) {
     }
     return next;
   });
+
   return acc;
 }
 
