@@ -10,10 +10,18 @@ arrayChange(inputArray) = 3.
 function arrayChange(inputArray) {
   let acc = 0;
   const cloneInputArr = [...inputArray];
-  cloneInputArr.reduce((cur, next) => {});
+  cloneInputArr.reduce((cur, next) => {
+    if (cur >= next) {
+      let tempVar = cur - next + 1;
+      acc += tempVar;
+      next += tempVar;
+    }
+    return next;
+  });
   return acc;
 }
 
-const inputArray = [1, 1, 1];
+// const inputArray = [3, 1, 1];
+const inputArray = [2, 3, 3, 5, 5, 5, 4, 12, 12, 10, 15];
 const res = arrayChange(inputArray);
 console.log(res);
