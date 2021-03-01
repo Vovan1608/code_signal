@@ -10,3 +10,5 @@ We can rearrange "aabb" to make "abba", which is a palindrome.
 function palindromeRearranging(inputString) {}
 
 const inputString = "aabb";
+const res = palindromeRearranging(inputString);
+console.log(res);
