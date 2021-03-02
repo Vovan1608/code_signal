@@ -22,15 +22,15 @@ There is no first number.
 function isIPv4Address(inputString) {
   const arr = inputString.split(".");
   const size = arr.length === 4 || false;
+  return size && arr.every(check);
+}
 
+function check(str) {
   return (
-    size &&
-    arr.every((el) => {
-      el !== "" &&
-        Number(el) >= 0 &&
-        Number(el) <= 255 &&
-        (el.split(" ").length > 1 ? !/[1-9]\d.*$/.test(el) : true);
-    })
+    str !== "" &&
+    Number(str) >= 0 &&
+    Number(str) <= 255 &&
+    (str.split("").length < 2 ? true : str[0] === "0" ? false : true)
   );
 }
 
@@ -39,5 +39,3 @@ const inputString = "64.233.161.00";
 // const inputString = "172.16.254.1";
 const res = isIPv4Address(inputString);
 console.log(res);
-
-// console.log(!/^0\d.*$/.test("01"));
