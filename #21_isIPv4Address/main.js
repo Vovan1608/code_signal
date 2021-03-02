@@ -20,10 +20,11 @@ There is no first number.
  */
 
 function isIPv4Address(inputString) {
-  return inputString;
+  return inputString.split(".").every((el) => el >= 0 && el <= 255);
 }
 
-const inputString = "172.16.254.1";
-// const inputString = "172.316.254.1";
+// const inputString = "172.16.254.1";
+const inputString = "172.316.254.1";
+// const inputString = ".254.255.0";
 const res = isIPv4Address(inputString);
 console.log(res);
