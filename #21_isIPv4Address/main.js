@@ -25,7 +25,9 @@ function isIPv4Address(inputString) {
 
   return (
     size &&
-    inputString.every((el) => el >= 0 && el <= 255 && el !== "" && el !== "00")
+    inputString.every(
+      (el) => Number(el) >= 0 && Number(el) <= 255 && /^[1-9]\d.*$/.test(el)
+    )
   );
 }
 
