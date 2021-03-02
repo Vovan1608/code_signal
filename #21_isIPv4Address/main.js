@@ -21,7 +21,7 @@ There is no first number.
 
 function isIPv4Address(inputString) {
   const arr = inputString.split(".");
-  const size = inputString.split(".").length === 4 || false;
+  const size = arr.length === 4 || false;
 
   return (
     size &&
