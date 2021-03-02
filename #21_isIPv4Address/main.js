@@ -23,17 +23,13 @@ function isIPv4Address(inputString) {
   const arr = inputString.split(".");
   const size = arr.length === 4 || false;
 
-  return (
-    size &&
-    inputString.every(
-      (el) => Number(el) >= 0 && Number(el) <= 255 && /^[1-9]\d.*$/.test(el)
-    )
-  );
+  return size && arr.every((el) => Number(el) >= 0 && Number(el) <= 255);
 }
 
-// const inputString = "172.316.254.1";
 // const inputString = ".254.255.0";
-const inputString = "64.233.161.00";
-// const inputString = "172.16.254.1";
+// const inputString = "64.233.161.00";
+const inputString = "172.16.254.1";
 const res = isIPv4Address(inputString);
 console.log(res);
+
+// console.log(/[1-9]\d.*$/.test("1"));
