@@ -9,3 +9,7 @@ avoidObstacles(inputArray) = 4
 */
 
 function avoidObstacles(inputArray) {}
+
+const inputArray = [5, 3, 6, 7, 9];
+const res = avoidObstacles(inputArray);
+console.log(res);
