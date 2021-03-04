@@ -9,14 +9,15 @@ avoidObstacles(inputArray) = 4
 */
 
 function avoidObstacles(inputArray) {
-  const sortArr = inputArray
-    .sort((a, b) => a - b)
-    .filter((el, indx) => {
-      return el[indx + 1] - el[indx] === 1;
-    }).length;
-  return sortArr;
+  let step = 2;
+  while (inputArray.some((el) => el % step === 0)) {
+    step += 1;
+  }
+  return step;
 }
 
-const inputArray = [5, 3, 6, 7, 9];
+// const inputArray = [5, 3, 6, 7, 9];
+// const inputArray = [2, 3]; // 4
+const inputArray = [1, 4, 10, 6, 2]; // 7
 const res = avoidObstacles(inputArray);
 console.log(res);
