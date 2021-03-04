@@ -8,7 +8,10 @@ For inputArray = [5, 3, 6, 7, 9], the output should be
 avoidObstacles(inputArray) = 4
 */
 
-function avoidObstacles(inputArray) {}
+function avoidObstacles(inputArray) {
+  const sortArr = inputArray.sort((a, b) => a - b);
+  return sortArr;
+}
 
 const inputArray = [5, 3, 6, 7, 9];
 const res = avoidObstacles(inputArray);
