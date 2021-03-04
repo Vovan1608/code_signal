@@ -9,7 +9,11 @@ avoidObstacles(inputArray) = 4
 */
 
 function avoidObstacles(inputArray) {
-  const sortArr = inputArray.sort((a, b) => a - b).reduce((cur, next) => {});
+  const sortArr = inputArray
+    .sort((a, b) => a - b)
+    .filter((el, indx) => {
+      return el[indx + 1] - el[indx] === 1;
+    }).length;
   return sortArr;
 }
 
