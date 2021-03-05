@@ -15,7 +15,9 @@ the output should be boxBlur(image) = [[1]].
 To get the value of the middle pixel in the input 3 × 3 square: (1 + 1 + 1 + 1 + 7 + 1 + 1 + 1 + 1) = 15 / 9 = 1.66666 = 1. The border pixels are cropped from the final result.
 */
 
-function boxBlur(image) {}
+function boxBlur(image) {
+  return image;
+}
 
 const image = [
   [1, 1, 1],
