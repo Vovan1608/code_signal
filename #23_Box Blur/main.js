@@ -5,3 +5,5 @@ The pixels in the input image are represented as integers. The algorithm distort
 
 Return the blurred image as an integer, with the fractions rounded down.
 */
+
+function boxBlur(image) {}
