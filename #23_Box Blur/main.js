@@ -27,3 +27,4 @@ const image = [
 const res = boxBlur(image);
 console.log(res);
 const add = document.querySelector("add");
+const ins = document.createElement("div");
