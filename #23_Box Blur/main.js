@@ -28,3 +28,4 @@ const res = boxBlur(image);
 console.log(res);
 const add = document.querySelector("add");
 const ins = document.createElement("div");
+ins.innerText = res;
