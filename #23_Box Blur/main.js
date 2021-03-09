@@ -16,8 +16,7 @@ To get the value of the middle pixel in the input 3 × 3 square: (1 + 1 + 1 + 1 
 */
 
 function boxBlur(image) {
-  
-  return image;
+  return [image];
 }
 
 const image = [
@@ -27,3 +26,4 @@ const image = [
 ];
 const res = boxBlur(image);
 console.log(res);
+const add = document.querySelector("add");
