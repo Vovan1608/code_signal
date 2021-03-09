@@ -16,6 +16,7 @@ To get the value of the middle pixel in the input 3 × 3 square: (1 + 1 + 1 + 1 
 */
 
 function boxBlur(image) {
+  
   return image;
 }
 
