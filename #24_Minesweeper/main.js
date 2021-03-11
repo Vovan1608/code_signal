@@ -16,3 +16,5 @@ minesweeper(matrix) = [
 	[1, 1, 1]
 ]
 */
+
+function minesweeper(matrix) {}
