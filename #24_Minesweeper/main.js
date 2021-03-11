@@ -17,4 +17,16 @@ minesweeper(matrix) = [
 ]
 */
 
-function minesweeper(matrix) {}
+function minesweeper(matrix) {
+  return matrix;
+}
+
+const matrix = [
+  [true, false, false],
+  [false, true, false],
+  [false, false, false],
+];
+const res = minesweeper(matrix);
+console.log(res);
+
+document.writeln(res);
