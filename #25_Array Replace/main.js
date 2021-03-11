@@ -8,7 +8,7 @@ arrayReplace(inputArray, elemToReplace, substitutionElem) = [3, 2, 3].
  */
 
 function arrayReplace(inputArray, elemToReplace, substitutionElem) {
-  return inputArray;
+  return inputArray.map((el) => (el === elemToReplace ? substitutionElem : el));
 }
 
 const inputArray = [1, 2, 1];
