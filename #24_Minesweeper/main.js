@@ -29,4 +29,4 @@ const matrix = [
 const res = minesweeper(matrix);
 console.log(res);
 
-document.writeln(res);
+res.forEach((el) => document.writeln(`${el} </br>`));
