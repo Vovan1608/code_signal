@@ -7,7 +7,9 @@ For n = 642386, the output should be
 evenDigitsOnly(n) = false.
  */
 
-function evenDigitsOnly(n) {}
+function evenDigitsOnly(n) {
+  return [...String(n)].every((el) => Number(el) % 2 === 0);
+}
 
 const n = 248622;
 const res = evenDigitsOnly(n);
