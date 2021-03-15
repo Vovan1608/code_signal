@@ -11,11 +11,11 @@ variableName(name) = false.
 */
 
 function variableName(name) {
-  return /^\D\w/g.test(name);
+  return /^[a-z_]\w*$/i.test(name);
 }
 
-// const names = "var_1__Int";
-const names = "qq-q";
+const names = "var_1__Int";
+// const names = "qq-q";
 // const names = "2w2";
 const res = variableName(names);
 
