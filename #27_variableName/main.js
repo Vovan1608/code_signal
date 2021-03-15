@@ -10,9 +10,13 @@ For name = "2w2", the output should be
 variableName(name) = false.
 */
 
-function variableName(name) {}
+function variableName(name) {
+  return /[a-zA-Z0-9_]/g.test(name) && isNaN(name[0]);
+}
 
-const names = "var_1__Int";
+// const names = "var_1__Int";
+const names = "qq-q";
+// const names = "2w2";
 const res = variableName(names);
 
 const add = document.querySelector(".add");
