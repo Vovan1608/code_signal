@@ -9,3 +9,15 @@ variableName(name) = false;
 For name = "2w2", the output should be
 variableName(name) = false.
 */
+
+function variableName(name) {}
+
+const names = "var_1__Int";
+const res = variableName(names);
+
+const add = document.querySelector(".add");
+const elem = document.createElement("div");
+elem.innerText = res;
+elem.style = "background: #2962ff";
+
+add.appendChild(elem);
