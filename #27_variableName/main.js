@@ -11,7 +11,7 @@ variableName(name) = false.
 */
 
 function variableName(name) {
-  return /[a-zA-Z0-9_]/g.test(name) && isNaN(name[0]);
+  return /^\D\w/g.test(name);
 }
 
 // const names = "var_1__Int";
