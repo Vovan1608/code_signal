@@ -4,7 +4,11 @@ Example
 For inputString = "crazy", the output should be alphabeticShift(inputString) = "dsbaz".
 */
 
-function alphabeticShift(inputString) {}
+function alphabeticShift(inputString) {
+  return [...inputString]
+    .map((el) => String.fromCharCode(el !== "z" ? el.charCodeAt() + 1 : 97))
+    .join("");
+}
 
 const inputString = "crazy";
 const res = alphabeticShift(inputString);
