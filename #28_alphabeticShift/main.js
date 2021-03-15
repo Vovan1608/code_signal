@@ -5,8 +5,11 @@ For inputString = "crazy", the output should be alphabeticShift(inputString) = "
 */
 
 function alphabeticShift(inputString) {
+  const CODE_CHAR_OF_A = 97;
   return [...inputString]
-    .map((el) => String.fromCharCode(el !== "z" ? el.charCodeAt() + 1 : 97))
+    .map((el) =>
+      String.fromCharCode(el !== "z" ? el.charCodeAt() + 1 : CODE_CHAR_OF_A)
+    )
     .join("");
 }
 
