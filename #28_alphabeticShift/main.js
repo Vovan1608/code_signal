@@ -3,3 +3,16 @@ Given a string, your task is to replace each of its characters by the next one i
 Example
 For inputString = "crazy", the output should be alphabeticShift(inputString) = "dsbaz".
 */
+
+function alphabeticShift(inputString) {}
+
+const inputString = "crazy";
+const res = alphabeticShift(inputString);
+
+const add = document.querySelector(".add");
+const elem = document.createElement("div");
+
+elem.innerText = res;
+elem.style = "background: #2962ff";
+
+add.appendChild(elem);
