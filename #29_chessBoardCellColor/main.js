@@ -5,10 +5,14 @@ For cell1 = "A1" and cell2 = "C3", the output should be
 chessBoardCellColor(cell1, cell2) = true.
  */
 
-function chessBoardCellColor(cell1, cell2) {
-  return true;
-}
+function chessBoardCellColor(cell1, cell2) {}
 
+function getCell(cell) {
+  const blackFigures = [
+    ["A", "C", "E", "G"],
+    [1, 3, 5, 7],
+  ];
+}
 const cell1 = "A1";
 const cell2 = "C3";
 const res = chessBoardCellColor(cell1, cell2);
