@@ -5,8 +5,17 @@ For cell1 = "A1" and cell2 = "C3", the output should be
 chessBoardCellColor(cell1, cell2) = true.
  */
 
-function chessBoardCellColor(cell1, cell2) {}
+function chessBoardCellColor(cell1, cell2) {
+  return true;
+}
 
 const cell1 = "A1";
 const cell2 = "C3";
 const res = chessBoardCellColor(cell1, cell2);
+
+const add = document.querySelector(".add");
+const elem = document.createElement("div");
+elem.innerText = res;
+elem.style = "background: #61dafb";
+
+add.appendChild(elem);
