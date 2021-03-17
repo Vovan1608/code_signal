@@ -31,12 +31,19 @@ function absoluteValuesSumMinimization(a) {
     return Math.min(...a);
   }
 
-  return a.map((el) =>
-    a.reduce((cur, next) => {
+  return a.reduce((acc, el) => {
+    let accEl = a.reduce((cur, next) => {
+      cur += Math.abs(acc - next);
+      return cur;
+    }, 0);
+
+    let nextEl = a.reduce((cur, next) => {
       cur += Math.abs(el - next);
       return cur;
-    }, 0)
-  );
+    }, 0);
+
+    return accEl < nextEl ? acc : el;
+  });
 }
 
 const a = [2, 4, 7];
