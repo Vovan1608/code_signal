@@ -13,7 +13,9 @@ Guaranteed constraints:
 0 ≤ firstNumber ≤ n - 1.
  */
 
-function circleOfNumbers(n, firstNumber) {}
+function circleOfNumbers(n, firstNumber) {
+  return n / 2 + firstNumber;
+}
 
 const n = 10;
 const firstNumber = 2;
