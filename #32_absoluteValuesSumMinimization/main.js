@@ -23,30 +23,26 @@ Because there is a tie, the smallest x between x = 2 and x = 3 is the answer.
 */
 
 function absoluteValuesSumMinimization(a) {
-  if (a.length === 1) {
-    return a[0];
-  }
+  // return a.reduce((acc, el) => {
+  //   let accEl = a.reduce((cur, next) => {
+  //     cur += Math.abs(acc - next);
+  //     return cur;
+  //   }, 0);
 
-  if (a.length === 2) {
-    return Math.min(...a);
-  }
+  //   let nextEl = a.reduce((cur, next) => {
+  //     cur += Math.abs(el - next);
+  //     return cur;
+  //   }, 0);
 
-  return a.reduce((acc, el) => {
-    let accEl = a.reduce((cur, next) => {
-      cur += Math.abs(acc - next);
-      return cur;
-    }, 0);
+  //   return accEl <= nextEl ? acc : el;
+  // });
 
-    let nextEl = a.reduce((cur, next) => {
-      cur += Math.abs(el - next);
-      return cur;
-    }, 0);
-
-    return accEl < nextEl ? acc : el;
-  });
+  return a[Math.ceil(a.length / 2) - 1];
 }
 
-const a = [2, 4, 7];
+// const a = [2, 4, 7];
+// const a = [1, 1, 3, 4];
+const a = [1, 2, 3, 4, 5];
 const res = absoluteValuesSumMinimization(a);
 
 const add = document.querySelector(".add");
