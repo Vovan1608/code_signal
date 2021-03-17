@@ -14,3 +14,15 @@ Guaranteed constraints:
  */
 
 function circleOfNumbers(n, firstNumber) {}
+
+const n = 10;
+const firstNumber = 2;
+const res = circleOfNumbers(n, firstNumber);
+
+const add = document.querySelector(".add");
+
+const elem = document.createElement("div");
+elem.innerText = res;
+elem.style = "background: #61dafb";
+
+add.appendChild(elem);
