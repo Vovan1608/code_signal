@@ -11,7 +11,15 @@ year 3: 172.8.
 Thus, it will take 3 years for your balance to pass the threshold, so the answer is 3.
 */
 
-function depositProfit(deposit, rate, threshold) {}
+function depositProfit(deposit, rate, threshold) {
+  let flag = 0;
+  while (threshold < deposit) {
+    deposit *= 1.2;
+    flag += 1;
+  }
+
+  return flag;
+}
 
 const deposit = 100;
 const rate = 20;
