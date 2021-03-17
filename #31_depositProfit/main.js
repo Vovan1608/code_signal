@@ -13,8 +13,9 @@ Thus, it will take 3 years for your balance to pass the threshold, so the answer
 
 function depositProfit(deposit, rate, threshold) {
   let flag = 0;
-  while (threshold < deposit) {
-    deposit *= 1.2;
+
+  while (deposit < threshold) {
+    deposit *= 1 + rate / 100;
     flag += 1;
   }
 
