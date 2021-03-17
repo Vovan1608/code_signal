@@ -23,13 +23,11 @@ Because there is a tie, the smallest x between x = 2 and x = 3 is the answer.
 */
 
 function absoluteValuesSumMinimization(a) {
-  return a.map(
-    (el) =>
-      a.reduce((cur, next) => {
-        cur + Math.abs(next - el);
-        return cur;
-      }),
-    0
+  return a.map((el) =>
+    a.reduce((cur, next) => {
+      cur += Math.abs(el - next);
+      return cur;
+    }, 0)
   );
 }
 
