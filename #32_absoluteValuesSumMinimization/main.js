@@ -23,6 +23,7 @@ Because there is a tie, the smallest x between x = 2 and x = 3 is the answer.
 */
 
 function absoluteValuesSumMinimization(a) {
+  // ! for unordered array
   // return a.reduce((acc, el) => {
   //   let accEl = a.reduce((cur, next) => {
   //     cur += Math.abs(acc - next);
@@ -37,6 +38,7 @@ function absoluteValuesSumMinimization(a) {
   //   return accEl <= nextEl ? acc : el;
   // });
 
+  //?  for ordered array
   return a[Math.ceil(a.length / 2) - 1];
 }
 
