@@ -9,7 +9,9 @@ For inputString = "0ss", the output should be
 firstDigit(inputString) = '0'.
 */
 
-function firstDigit(inputString) {}
+function firstDigit(inputString) {
+  return inputString.match(/\d/)[0];
+}
 
 const inputString = "var_1__Int";
 const res = firstDigit(inputString);
