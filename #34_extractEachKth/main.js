@@ -6,7 +6,7 @@ extractEachKth(inputArray, k) = [1, 2, 4, 5, 7, 8, 10].
 */
 
 function extractEachKth(inputArray, k) {
-  return inputArray;
+  return inputArray.filter((el, index) => (index + 1) % k);
 }
 
 const inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -23,3 +23,5 @@ el.style = `background: #61dafb;
    			text-align: center;
    			border: 1px solid black
 `;
+
+add.append(el);
