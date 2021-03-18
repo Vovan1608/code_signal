@@ -27,7 +27,10 @@ It's possible to arrange these strings in a way that each consecutive pair of st
 function stringsRearrangement(a) {
   for (let i = 0; i < a.length; i++) {
     let remaining = findNext(a[i], a);
-    if (remaining.length === 0) return true;
+
+    if (remaining.length === 0) {
+      return true;
+    }
   }
   return false;
 }
