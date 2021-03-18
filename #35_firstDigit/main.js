@@ -10,3 +10,19 @@ firstDigit(inputString) = '0'.
 */
 
 function firstDigit(inputString) {}
+
+const inputString = "var_1__Int";
+const res = firstDigit(inputString);
+
+const add = document.querySelector("#add");
+
+const el = document.createElement("div");
+el.innerText = res;
+el.style = `
+	background: #61dafb;
+	font-size: 36px;
+	text-align: center;
+	border: 1px solid black
+`;
+
+add.append(el);
