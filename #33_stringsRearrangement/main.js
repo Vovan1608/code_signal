@@ -25,5 +25,17 @@ It's possible to arrange these strings in a way that each consecutive pair of st
 */
 
 function stringsRearrangement(inputArray) {
-
+  return true;
 }
+
+const inputArray = ["aba", "bbb", "bab"];
+// const inputArray = ["ab", "bb", "aa"];
+const res = stringsRearrangement(inputArray);
+
+const add = document.querySelector("#add");
+const elem = document.createElement("div");
+elem.innerText = res;
+elem.style =
+  "background: #61dafb; font-size: 36px; text-align: center; border: 1px solid black";
+
+add.append(elem);
