@@ -17,7 +17,9 @@ knapsackLight(value1, weight1, value2, weight2, maxW) = 7.
 You can't take both items, but you can take any of them.
 */
 
-function knapsackLight(value1, weight1, value2, weight2, maxW) {}
+function knapsackLight(value1, weight1, value2, weight2, maxW) {
+  const weights = [weight1, weight2];
+}
 
 const res1 = knapsackLight(10, 5, 6, 4, 8); // 10
 const res2 = knapsackLight(10, 5, 6, 4, 9); // 16
