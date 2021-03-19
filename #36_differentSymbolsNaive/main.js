@@ -6,7 +6,9 @@ differentSymbolsNaive(s) = 3.
 There are 3 different characters a, b and c.
 */
 
-function differentSymbolsNaive(s) {}
+function differentSymbolsNaive(s) {
+  return new Set(s).size;
+}
 
 const s = "cabca";
 const res = differentSymbolsNaive(s);
