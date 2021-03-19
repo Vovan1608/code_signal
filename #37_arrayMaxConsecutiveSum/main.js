@@ -13,10 +13,18 @@ All possible sums of 2 consecutive elements are:
 Thus, the answer is 8.
 */
 
-function arrayMaxConsecutiveSum(inputArray, k) {}
+function arrayMaxConsecutiveSum(inputArray, k) {
+  let max = inputArray.slice(0, k).reduce((pre, val) => pre + val);
+  let sum = max;
+  for (let i = k; i < inputArray.length; i++) {
+    sum += inputArray[i] - inputArray[i - k];
+    if (sum > max) max = sum;
+  }
+  return max;
+}
 
 const inputArray = [2, 3, 5, 1, 6];
-const k = 2;
+const k = 3;
 const res = arrayMaxConsecutiveSum(inputArray, k);
 
 const add = document.querySelector("#add");
