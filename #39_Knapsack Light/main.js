@@ -23,3 +23,17 @@ const res1 = knapsackLight(10, 5, 6, 4, 8); // 10
 const res2 = knapsackLight(10, 5, 6, 4, 9); // 16
 const res3 = knapsackLight(10, 5, 6, 4, 6); // 7
 const res = [res1, res2, res3];
+
+const add = document.querySelector("#add");
+add.style = `
+	background: #61dafb;
+	font-size: 36px;
+	text-align: center;
+	border: 1px solid black
+`;
+
+for (let i = 0; i < res.length; i++) {
+  const el = document.createElement("div");
+  el.innerText = res[i];
+  add.append(el);
+}
