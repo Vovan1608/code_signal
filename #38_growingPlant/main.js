@@ -21,7 +21,28 @@ growingPlant(upSpeed, downSpeed, desiredHeight) = 10.
 The plant first reaches a height of 910 on day 10.
 */
 
-function growingPlant(upSpeed, downSpeed, desiredHeight) {}
+function growingPlant(upSpeed, downSpeed, desiredHeight) {
+  let days = 1;
+
+  if (upSpeed > desiredHeight) {
+    return days;
+  }
+
+  const difference = upSpeed - downSpeed;
+
+  for (let i = upSpeed; i <= desiredHeight || i > desiredHeight; ) {
+    i += difference;
+    days++;
+    if (i === desiredHeight) {
+      break;
+    }
+    if (i > desiredHeight) {
+      break;
+    }
+  }
+
+  return days;
+}
 
 const upSpeed = 100;
 const downSpeed = 10;
