@@ -12,9 +12,18 @@ digitDegree(n) = 2.
 9 + 1 = 10 -> 1 + 0 = 1.
 */
 
-function digitDegree(n) {}
+function digitDegree(n) {
+  let digitDegree = 0;
 
-const n = 100;
+  while (n >= 10) {
+    n = [...String(n)].reduce((sum, next) => Number(sum) + Number(next));
+    digitDegree++;
+  }
+
+  return digitDegree;
+}
+
+const n = 9;
 const res = digitDegree(n);
 
 const add = document.querySelector("#add");
@@ -22,7 +31,7 @@ const add = document.querySelector("#add");
 const el = document.createElement("div");
 el.innerText = res;
 el.style = `
-	background-color: #61adbf;
+	background-color: #61dafb;
 	font-size: 36px;
 	text-align: center;
 	border: 1px solid black;
