@@ -18,12 +18,23 @@ You can't take both items, but you can take any of them.
 */
 
 function knapsackLight(value1, weight1, value2, weight2, maxW) {
-  const weights = [weight1, weight2];
+  if (maxW < weight1 && maxW < weight2) {
+    return 0;
+  }
+
+  if (maxW >= weight1 + weight2) {
+    return value1 + value2;
+  }
+
+  if (maxW >= weight1 && maxW >= weight2) {
+    return value1 > value2 ? value1 : value2;
+  }
+  return maxW >= weight1 ? value1 : value2;
 }
 
 const res1 = knapsackLight(10, 5, 6, 4, 8); // 10
 const res2 = knapsackLight(10, 5, 6, 4, 9); // 16
-const res3 = knapsackLight(10, 5, 6, 4, 6); // 7
+const res3 = knapsackLight(5, 3, 7, 4, 6); // 7
 const res = [res1, res2, res3];
 
 const add = document.querySelector("#add");
