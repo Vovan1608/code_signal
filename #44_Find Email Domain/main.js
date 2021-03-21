@@ -11,9 +11,14 @@ For address = "fully-qualified-domain@codesignal.com", the output should be
 findEmailDomain(address) = "codesignal.com".
 */
 
-function findEmailDomain(address) {}
+function findEmailDomain(address) {
+  return address.split("@").pop();
+}
 
-const address = "prettyandsimple@example.com";
+// const address = "prettyandsimple@example.com";
+// const address = "fully-qualified-domain@codesignal.com";
+const address = "example-indeed@strange-example.com";
+// const address = '"very.unusual.@.unusual.com"@usual.com';
 const res = findEmailDomain(address);
 
 const add = document.querySelector("#add");
