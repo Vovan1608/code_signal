@@ -11,7 +11,12 @@ For bishop = "h1" and pawn = "h3", the output should be
 bishopAndPawn(bishop, pawn) = false
 */
 
-function bishopAndPawn(bishop, pawn) {}
+function bishopAndPawn(bishop, pawn) {
+  return (
+    Math.abs(bishop[0].charCodeAt() - pawn[0].charCodeAt()) ===
+    Math.abs(bishop[1] - pawn[1])
+  );
+}
 
 const bishop = "a1";
 const pawn = "c3";
