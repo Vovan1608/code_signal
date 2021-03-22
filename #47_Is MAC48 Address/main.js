@@ -19,16 +19,17 @@ isMAC48Address(inputString) = false.
 
 function isMAC48Address(inputString) {
   const correctLengthOfMAC48Address = 17;
+  const numOfOnlyCharactersInMAC48Address = 12;
+
+  const temp = inputString.split("-").join("").split("");
+
   return (
     inputString.length === correctLengthOfMAC48Address &&
-    inputString
-      .split("-")
-      .join("")
-      .split("")
-      .every(
-        (el) =>
-          (el >= 0 && el <= 9) || ["A", "B", "C", "D", "E", "F"].includes(el)
-      )
+    temp.length === numOfOnlyCharactersInMAC48Address &&
+    temp.every(
+      (el) =>
+        (el >= 0 && el <= 9) || ["A", "B", "C", "D", "E", "F"].includes(el)
+    )
   );
 }
 
