@@ -17,10 +17,34 @@ The last candidate can't win no matter what (for the same reason as the first ca
 Thus, only 2 candidates can win (the second and the third), which is the answer.
 */
 
-function electionsWinners(votes, k) {}
+function electionsWinners(votes, k) {
+  const max = Math.max(...votes);
+  const numOfMax = votes.filter((el) => el === max).length;
 
-const votes = [2, 3, 5, 2];
-const k = 3;
+  return votes.reduce(
+    (acc, vote) =>
+      acc + ((vote === max && numOfMax === 1) || vote + k > max ? 1 : 0),
+    0
+  );
+}
+
+// const votes = [2, 3, 5, 2]; // -> 2
+// const k = 3;
+
+// const votes = [1, 3, 3, 1, 1]; // -> 0
+// const k = 0;
+
+// const votes = [5, 1, 3, 4, 1]; // -> 1
+// const k = 0;
+
+// const votes = [1, 1, 1, 1]; // -> 4
+// const k = 1;
+
+// const votes = [1, 1, 1, 1]; // -> 0
+// const k = 0;
+
+const votes = [3, 1, 1, 3, 1]; // -> 2
+const k = 2;
 
 const res = electionsWinners(votes, k);
 
