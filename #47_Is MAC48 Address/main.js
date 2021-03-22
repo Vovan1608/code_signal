@@ -31,6 +31,8 @@ function isMAC48Address(inputString) {
         (el >= 0 && el <= 9) || ["A", "B", "C", "D", "E", "F"].includes(el)
     )
   );
+
+  // /^([0-9A-F]{2}-){5}[0-9A-F]{2}$/.test(s)
 }
 
 const inputString = "00-1B-63-84-45-E6"; // -> true
