@@ -18,18 +18,22 @@ isMAC48Address(inputString) = false.
 */
 
 function isMAC48Address(inputString) {
-  return inputString
-    .split("-")
-    .join("")
-    .split("")
-    .every(
-      (el) =>
-        (el >= 0 && el <= 9) || ["A", "B", "C", "D", "E", "F"].includes(el)
-    );
+  const correctLengthOfMAC48Address = 17;
+  return (
+    inputString.length === correctLengthOfMAC48Address &&
+    inputString
+      .split("-")
+      .join("")
+      .split("")
+      .every(
+        (el) =>
+          (el >= 0 && el <= 9) || ["A", "B", "C", "D", "E", "F"].includes(el)
+      )
+  );
 }
 
-const inputString = "00-1B-63-84-45-E6"; // -> true
-// const inputString = "Z1-1B-63-84-45-E6" // -> false
+const inputString = "00-1B-63-84-45-E6-"; // -> true
+// const inputString = "Z1-1B-63-84-45-E6"; // -> false
 
 const res = isMAC48Address(inputString);
 
