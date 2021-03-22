@@ -27,7 +27,7 @@ const res = electionsWinners(votes, k);
 const add = document.querySelector("#add");
 add.style = `
 	background-color: #61dafb;
-	margin: 0 auto;
+	text-align: center;
 	font-size: 36px;
 	border: 1px solid black;
 `;
