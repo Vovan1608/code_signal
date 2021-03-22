@@ -17,9 +17,20 @@ For inputString = "not a MAC-48 address", the output should be
 isMAC48Address(inputString) = false.
 */
 
-function isMAC48Address(inputString) {}
+function isMAC48Address(inputString) {
+  return inputString
+    .split("-")
+    .join("")
+    .split("")
+    .every(
+      (el) =>
+        (el >= 0 && el <= 9) || ["A", "B", "C", "D", "E", "F"].includes(el)
+    );
+}
 
-const inputString = "00-1B-63-84-45-E6";
+const inputString = "00-1B-63-84-45-E6"; // -> true
+// const inputString = "Z1-1B-63-84-45-E6" // -> false
+
 const res = isMAC48Address(inputString);
 
 const add = document.querySelector("#add");
