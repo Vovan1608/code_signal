@@ -8,6 +8,15 @@ buildPalindrome(st) = "abcdcba".
 */
 
 function buildPalindrome(st) {
+  var i = 0;
+  var aux;
+  while(st != [...st].reverse().join('')){
+		aux = [...st];
+		aux.splice(st.length-i, 0 ,st[i]);
+		st = aux.join('');
+		i++;
+	}
+
   return st;
 }
 
