@@ -33,7 +33,7 @@ function isMAC48Address(inputString) {
   );
 }
 
-const inputString = "00-1B-63-84-45-E6-"; // -> true
+const inputString = "00-1B-63-84-45-E6"; // -> true
 // const inputString = "Z1-1B-63-84-45-E6"; // -> false
 
 const res = isMAC48Address(inputString);
