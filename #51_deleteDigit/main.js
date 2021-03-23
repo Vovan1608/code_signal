@@ -9,26 +9,13 @@ For n = 1001, the output should be
 deleteDigit(n) = 101.
 */
 
-function deleteDigit(num) {
-  let result = 0;
-  const numDigits = [];
-
-  while (num) {
-    numDigits.push(num % 10);
-    num = Math.floor(num / 10);
+function deleteDigit(n) {
+  let max = 0;
+  for (let i = 1; i <= n; i *= 10) {
+    let temp = (n % i) + Math.floor(Math.floor(n / i) / 10) * i;
+    max = Math.max(max, temp);
   }
-
-  for (let index = 0; index < numDigits.length; index++) {
-    let n = 0;
-    for (let i = numDigits.length - 1; i >= 0; i--) {
-      if (i !== index) {
-        n = n * 10 + numDigits[i];
-      }
-    }
-    result = Math.max(n, result);
-  }
-
-  return result;
+  return max;
 }
 
 // const n = 152; // -> 52
