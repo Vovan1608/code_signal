@@ -22,7 +22,7 @@ add.style = `
 	background-color: #61dafb;
 	font-size: 36px;
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid red;
 `;
 
 const el = document.createElement("div");
