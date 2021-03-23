@@ -9,9 +9,12 @@ For symbol = '-', the output should be
 isDigit(symbol) = false.
 */
 
-function isDigit(symbol) {}
+function isDigit(symbol) {
+  return !isNaN(symbol);
+}
 
-const symbol = "0";
+// const symbol = "0";
+const symbol = "-";
 const res = isDigit(symbol);
 
 const add = document.querySelector("#add");
