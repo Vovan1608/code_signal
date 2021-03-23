@@ -7,9 +7,15 @@ For cell = "a1", the output should be
 chessKnight(cell) = 2.
 */
 
-function chessKnight(cell) {}
+function chessKnight(cell) {
+  const [char, num] = [...cell];
+  const count = 0;
+  return [char, num];
+}
 
 const cell = "a1"; // -> 2
+// const cell = "c2"; // -> 6
+// const cell = "d5"; // -> 8
 const res = chessKnight(cell);
 
 const add = document.querySelector("#add");
