@@ -10,21 +10,24 @@ deleteDigit(n) = 101.
 */
 
 function deleteDigit(num) {
-  var result = 0,
-    num_digits = [];
+  let result = 0;
+  const numDigits = [];
+
   while (num) {
-    num_digits.push(num % 10);
+    numDigits.push(num % 10);
     num = Math.floor(num / 10);
   }
-  for (var index_num = 0; index_num < num_digits.length; index_num++) {
-    var n = 0;
-    for (var i = num_digits.length - 1; i >= 0; i--) {
-      if (i !== index_num) {
-        n = n * 10 + num_digits[i];
+
+  for (let index = 0; index < numDigits.length; index++) {
+    let n = 0;
+    for (let i = numDigits.length - 1; i >= 0; i--) {
+      if (i !== index) {
+        n = n * 10 + numDigits[i];
       }
     }
     result = Math.max(n, result);
   }
+
   return result;
 }
 
