@@ -28,13 +28,6 @@ function deleteDigit(num) {
   return result;
 }
 
-function deleteNum(n) {
-  const arr = [...String(n)].map((el) => Number(el));
-  arr.splice(arr.indexOf(Math.min(...arr)), 1);
-
-  return arr;
-}
-
 // const n = 152; // -> 52
 // const n = 1001; // -> 101
 const n = 222250; // -> 22250
