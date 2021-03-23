@@ -9,8 +9,32 @@ chessKnight(cell) = 2.
 
 function chessKnight(cell) {
   const [char, num] = [...cell];
-  const count = 0;
-  return [char, num];
+  let count = 0;
+  if (char.charCodeAt() - 2 >= "a".charCodeAt()) {
+    count++;
+  }
+  if (char.charCodeAt() - 1 >= "a".charCodeAt()) {
+    count++;
+  }
+  if (char.charCodeAt() + 2 <= "h".charCodeAt()) {
+    count++;
+  }
+  if (char.charCodeAt() - 2 <= "h".charCodeAt()) {
+    count++;
+  }
+  if (num - 2 > 0) {
+    count++;
+  }
+  if (num - 1 > 0) {
+    count++;
+  }
+  if (num + 2 <= 8) {
+    count++;
+  }
+  if (num + 1 <= 8) {
+    count++;
+  }
+  return count;
 }
 
 const cell = "a1"; // -> 2
