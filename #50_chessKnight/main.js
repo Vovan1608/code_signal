@@ -8,37 +8,50 @@ chessKnight(cell) = 2.
 */
 
 function chessKnight(cell) {
-  const [char, num] = [...cell];
+  const [char, numStr] = [...cell];
+  const charCode = char.charCodeAt();
+  const CODE_OF_CHAR_A = "a".charCodeAt();
+  const CODE_OF_CHAR_H = "h".charCodeAt();
+  const num = Number(numStr);
   let count = 0;
-  if (char.charCodeAt() - 2 >= "a".charCodeAt()) {
+
+  if (charCode + 1 <= CODE_OF_CHAR_H && num + 2 <= 8) {
     count++;
   }
-  if (char.charCodeAt() - 1 >= "a".charCodeAt()) {
+
+  if (charCode + 1 <= CODE_OF_CHAR_H && num - 2 >= 1) {
     count++;
   }
-  if (char.charCodeAt() + 2 <= "h".charCodeAt()) {
+
+  if (charCode - 1 >= CODE_OF_CHAR_A && num + 2 <= 8) {
     count++;
   }
-  if (char.charCodeAt() - 2 <= "h".charCodeAt()) {
+
+  if (charCode - 1 >= CODE_OF_CHAR_A && num - 2 >= 1) {
     count++;
   }
-  if (num - 2 > 0) {
+
+  if (charCode + 2 <= CODE_OF_CHAR_H && num + 1 <= 8) {
     count++;
   }
-  if (num - 1 > 0) {
+
+  if (charCode + 2 <= CODE_OF_CHAR_H && num - 1 >= 1) {
     count++;
   }
-  if (num + 2 <= 8) {
+
+  if (charCode - 2 >= CODE_OF_CHAR_A && num + 1 <= 8) {
     count++;
   }
-  if (num + 1 <= 8) {
+
+  if (charCode - 2 >= CODE_OF_CHAR_A && num - 1 >= 1) {
     count++;
   }
+
   return count;
 }
 
-const cell = "a1"; // -> 2
-// const cell = "c2"; // -> 6
+// const cell = "a1"; // -> 2
+const cell = "c2"; // -> 6
 // const cell = "d5"; // -> 8
 const res = chessKnight(cell);
 
