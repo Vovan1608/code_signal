@@ -14,9 +14,29 @@ For s = "aabbbc", the output should be
 lineEncoding(s) = "2a3bc".
 */
 
-function lineEncoding(s) {}
+function lineEncoding(s) {
+  const arr = [...s];
+  let count = 1;
+  let newArr = [];
 
-const s = "aabbbc"; // -> "2a3bc"
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      count++;
+    } else {
+      if (count > 1) {
+        newArr.push(count, arr[i]);
+        count = 1;
+        continue;
+      }
+      newArr.push(arr[i]);
+    }
+  }
+
+  return newArr.join("");
+}
+
+// const s = "aabbbc"; // -> "2a3bc"
+const s = "abbcabb"; // -> "a2bca2b"
 const res = lineEncoding(s);
 
 const add = document.querySelector("#add");
