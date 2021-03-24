@@ -8,7 +8,11 @@ For inputString = "2 apples, 12 oranges", the output should be
 sumUpNumbers(inputString) = 14.
 */
 
-function sumUpNumbers(inputString) {}
+function sumUpNumbers(inputString) {
+  return inputString
+    .match(/\d+/g)
+    .reduce((cur, next) => Number(cur) + Number(next));
+}
 
 const inputString = "2 apples, 12 oranges"; // -> 14
 
