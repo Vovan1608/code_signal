@@ -12,12 +12,13 @@ validTime(time) = false.
 */
 
 function validTime(time) {
-  return /([01][0-9]|2[0-3]):([0-5][0-9])/.test(time);
+  return /([01]\d|2[0-3]):([0-5]\d)/.test(time);
 }
 
 // const time = "13:58"; // -> true
 // const time = "25:51"; // -> false
-const time = "27:00"; // -> false
+// const time = "27:00"; // -> false
+const time = "23:76";
 
 const add = document.querySelector("#add");
 add.style = `
