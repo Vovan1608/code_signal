@@ -9,9 +9,15 @@ sumUpNumbers(inputString) = 14.
 */
 
 function sumUpNumbers(inputString) {
-  return inputString
-    .match(/\d+/g)
-    .reduce((cur, next) => Number(cur) + Number(next));
+  const arrOfNums = inputString.match(/\d+/g);
+
+  if (arrOfNums && arrOfNums.length === 1) {
+    return Number(arrOfNums[0]);
+  }
+
+  return arrOfNums
+    ? arrOfNums.reduce((cur, next) => Number(cur) + Number(next))
+    : 0;
 }
 
 const inputString = "2 apples, 12 oranges"; // -> 14
