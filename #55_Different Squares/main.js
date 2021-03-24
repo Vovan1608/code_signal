@@ -1,6 +1,6 @@
 "use strict";
 
-/* 
+/*
 Given a rectangular matrix containing only digits, calculate the number of different 2 × 2 squares in it.
 For
 
@@ -28,7 +28,21 @@ Here are all 6 different 2 × 2 squares:
 	2 1
 */
 
-function differentSquares(matrix) {}
+function differentSquares(matrix) {
+  let temp = new Set();
+  for (let i = 0; i < matrix.length - 1; i++) {
+    for (let j = 0; j < matrix[0].length - 1; j++) {
+      let hash =
+        matrix[i][j] +
+        10 * matrix[i][j + 1] +
+        100 * matrix[i + 1][j] +
+        1000 * matrix[i + 1][j + 1];
+      temp.add(hash);
+    }
+  }
+
+  return temp.size;
+}
 
 const matrix = [
   [1, 2, 1],
