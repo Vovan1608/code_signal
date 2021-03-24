@@ -13,6 +13,9 @@ validTime(time) = false.
 
 function validTime(time) {
   return /([01]\d|2[0-3]):([0-5]\d)/.test(time);
+
+  // const [hour, minute] = time.split(":");
+  // return Number(hour) < 24 && Number(minute) < 60;
 }
 
 // const time = "13:58"; // -> true
