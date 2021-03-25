@@ -11,7 +11,12 @@ The first 8 characters of the code are 01001000, which is 72 in the binary numer
 Other letters can be obtained in the same manner.
 */
 
-function messageFromBinaryCode(code) {}
+function messageFromBinaryCode(code) {
+  return code
+    .match(/.{1,8}/g)
+    .map((el) => String.fromCharCode(parseInt(el, 2)))
+    .join("");
+}
 
 const code = "010010000110010101101100011011000110111100100001";
 
@@ -21,7 +26,7 @@ add.style = `
 	font-size: 36px;
 	text-align: center;
 	border: 2px solid #000;
-	border-radius: 10px;
+	border-radius: 7px;
 `;
 
 const el = document.createElement("div");
