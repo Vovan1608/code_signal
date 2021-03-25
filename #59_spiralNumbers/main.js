@@ -10,11 +10,29 @@ spiralNumbers(n) = [[1, 2, 3],
 */
 
 function spiralNumbers(n) {
-  return [
-    [1, 2, 3],
-    [8, 9, 4],
-    [7, 6, 5],
-  ];
+  const matrix = [...Array(n)].map((_) => []);
+  let x = 0;
+  let y = 0;
+  let dir = 2;
+  let size = n;
+  let c = 0;
+  for (let i = 1; i <= n * n; i++) {
+    matrix[y][x] = i;
+
+    if (++c === size) {
+      dir = (dir + 1) % 4;
+      size -= dir % 2;
+      c = 0;
+    }
+
+    if (dir % 2 == 0) {
+      x += dir > 1 ? 1 : -1;
+    } else {
+      y += dir > 1 ? 1 : -1;
+    }
+  }
+
+  return matrix;
 }
 
 const n = 3;
