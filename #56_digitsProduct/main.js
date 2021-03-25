@@ -9,9 +9,33 @@ For product = 19, the output should be
 digitsProduct(product) = -1.
 */
 
-function digitsProduct(product) {}
+function digitsProduct(product) {
+  if (product === 0) {
+    return 10;
+  }
 
-const product = 12;
+  if (product === 1) {
+    return 1;
+  }
+
+  const digits = [];
+
+  for (let i = 9; i > 1; i--) {
+    while (product % i === 0) {
+      digits.unshift(i);
+      product /= i;
+    }
+  }
+
+  return product > 1 ? -1 : parseInt(digits.join(""));
+}
+
+// const product = 12; // -> 26 -> 12 = 2 * 6
+const product = 450; // -> 2559 -> 450 = 2 * 5 * 5 * 9
+// const product = 19; // -> -1
+// const product = 0; // -> 10 -> 0 = 1 * 0
+// const product = 1; // -> 1 -> 1 = 1 * 1
+// const product = 243; // -> 399 -> 243 = 3 * 9 * 9
 
 const add = document.querySelector("#add");
 add.style = `
