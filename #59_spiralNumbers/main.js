@@ -16,6 +16,7 @@ function spiralNumbers(n) {
   let dir = 2;
   let size = n;
   let c = 0;
+
   for (let i = 1; i <= n * n; i++) {
     matrix[y][x] = i;
 
@@ -35,7 +36,7 @@ function spiralNumbers(n) {
   return matrix;
 }
 
-const n = 3;
+const n = 10;
 
 const add = document.querySelector("#add");
 add.style = `
